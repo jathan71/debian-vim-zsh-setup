@@ -352,7 +352,7 @@ Editamos el archivo de configuración de zsh:
 $ vim .zshrc
 ```
 
-Agregamos la lista de sources:
+Cambiamos el tema de gianu por powerlevel10k:
 
 ```shell
 ZSH_THEME="powerlevel10k/powerlevel10k"
