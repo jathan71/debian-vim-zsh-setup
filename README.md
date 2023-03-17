@@ -1,28 +1,28 @@
-# Linux Setup
+# Debian GNU/Linux Vim and ZSH setup
 
 ## Intro
 
-En esta guia se describe la configuración del sistema Linux para adaptarlo a un ambiente de trabajo para realizar
-tareas relacionadas a la administración de:
+En esta guia se describe la configuración del sistema operativo GNU/Linux para adaptarlo a un ambiente de trabajo para
+realizar tareas relacionadas a la administración de:
 
-* Linux Personal
+* Linux personal
 * Servidores Linux
-* Recursos Cloud
+* Recursos cloud
 * Clusters Kubernetes
 * Desarrollo de software
 
-Intentare usar en su mayoría software libre, es decir, software GNU, el kernel Linux y en especificó la distro
-Kubuntu en una arquitectura x86 de 64-bit.
+Se utilizará Software Libre, es decir, software GNU, el kernel Linux y en especifico la distro Debian GNU/Linux 11
+Bullseye en una arquitectura x86 de 64-bit.
 
-Para esto necesito dejar algunas cosas bien configuradas:
+Para esto necesitamos dejar algunas cosas bien configuradas:
 
 * Entornos de desarrollo
 * Gestores de paquetes
 * Editor de textos
-* Emulador de Terminal
+* Emulador de terminal
 * Entorno del shell
 * Cliente VPN
-* Navegador Web
+* Navegador web
 
 ## Objetivos
 
@@ -39,10 +39,9 @@ Realizaremos las siguientes actividades orientadas a instalar y configurar:
 
 ## Gestor de paquetes APT
 
-El programa `apt` es la herramienta de gestión de paquetes en `Kubuntu`, ya que esta basado en la distribución
-`Ubuntu` y esta a su vez se basa en `Debian`.
+El programa `apt` es la herramienta de gestión de paquetes en `Debian`.
 
-Apt ya viene pre instalado en Kubuntu por lo que no hay que instalarlo por separado.
+Apt ya viene pre instalado en Debian 11 Bullseye por lo que no hay que instalarlo por separado.
 
 Lo primero que debemos aprender a usar es actualizar la lista de paquetes de los repositorios:
 
@@ -302,10 +301,10 @@ plugins=(git)
 por:
 
 ```shell
-plugins=(cp colored-man-pages colorize pip python git vi-mode)
+plugins=(cp colored-man-pages colorize pip python git zsh-autosuggestions zsh-syntax-highlighting)
 ```
 
-Guardamos y re cargamos configuración:
+Guardamos y actualizamos la configuración:
 
 ```shell
 $ source .zshrc
@@ -328,10 +327,10 @@ ZSH_THEME="robbyrussell"
 Por:
 
 ```shell
-ZSH_THEME="agnoster"
+ZSH_THEME="gianu"
 ```
 
-Guardamos y re cargamos configuración:
+Guardamos y actualizamos la configuración:
 
 ```shell
 $ source .zshrc
@@ -339,13 +338,12 @@ $ source .zshrc
 
 Lista de temas: https://github.com/ohmyzsh/ohmyzsh/wiki/themes.
 
-### Configurando tema powerlevel19k
+### Configurando tema powerlevel10k
 
-Instalamos el tema powerlevel9k:
+Instalamos el tema powerlevel10k:
 
 ```shell
-$ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
-```
+$ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k```
 
 Editamos el archivo de configuración de zsh:
 
@@ -356,29 +354,25 @@ $ vim .zshrc
 Agregamos la lista de sources:
 
 ```shell
-ZSH_THEME="powerlevel9k/powerlevel9k"
-# Powerlevel9k settings
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user host dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status battery time)
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-POWERLEVEL9K_OS_ICON_BACKGROUND="white"
-POWERLEVEL9K_OS_ICON_FOREGROUND="blue"
-POWERLEVEL9K_TIME_FORMAT="%D{%H:%M:%S | %d.%m.%y}"
-
+ZSH_THEME="powerlevel10k/powerlevel10k"
 ```
 
-Otras opciones:
-
-```shell
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="↱"
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="↳ "
-```
-
-Guardamos y re cargamos configuración:
+Guardamos y actualizamos la configuración:
 
 ```shell
 $ source .zshrc
 ```
 
-Proyecto: https://github.com/Powerlevel9k/powerlevel9k/wiki/Install-Instructions#option-2-install-for-oh-my-zsh
+Seguimos las indicaciones del asistente de configuración de powerlevel10k que aparecerá al actualizar la shell ZSH y en
+caso de que no se ejecute automáticamente el asistente de configuración de powerlevel10k, ejecutaremos la orden
+
+```shell
+$ p10k configure
+```
+Seguir las indicaciones del asistente de configuración y seleccionar las opciones según nuestro gusto personal para usar
+ZSH con el tema powelevel10k
+
+Proyectos: https://www.zsh.org/
+https://ohmyz.sh/
+https://github.com/ohmyzsh/ohmyzsh
+https://github.com/romkatv/powerlevel10k
