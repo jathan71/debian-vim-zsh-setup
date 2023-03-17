@@ -371,7 +371,7 @@ caso de que no se ejecute automáticamente el asistente de configuración de pow
 $ p10k configure
 ```
 Seguir las indicaciones del asistente de configuración y seleccionar las opciones según nuestro gusto personal para usar
-ZSH con el tema powelevel10k
+ZSH con el tema powelevel10k.
 
 Proyectos: https://www.zsh.org/
 https://ohmyz.sh/
