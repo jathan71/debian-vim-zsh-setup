@@ -1,4 +1,4 @@
-# Debian GNU/Linux Vim and ZSH setup
+# Debian GNU/Linux, Vim and ZSH setup
 
 ## Intro
 
