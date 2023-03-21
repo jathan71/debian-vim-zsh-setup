@@ -28,7 +28,7 @@ Para esto necesitamos dejar algunas cosas bien configuradas:
 
 Realizaremos las siguientes actividades orientadas a instalar y configurar:
 
-* Herramientas de linea de comando GNU
+* Herramientas de línea de comando GNU
 * Gestor de paquetes Apt
 * Editor de textos vim
 * Gestor de ventanas i3
@@ -469,20 +469,21 @@ exec --no-startup-id /home/jathan/Documents/Scripts/inicio-conky
 Atajos de teclado:
 Tecla Super= tecla entre crtl y alt izquierdos
 
-Super+1: Escritorio 1
-Super+2: Escritorio 2
-Super+3: Escritorio 3
-Super+4: Escritorio 4
-Super+Enter: lxterminal
-Super+Shift+f: pcmanfm
-Super+Shift+w: navegador web
-Super+f: Cambiar ventana a pantalla completa
-Super+j: Ir a ventana izquierda
-Super+k: Ir a ventana inferior
-Super+l: Ir a ventana superior
-Super+ñ: Ir a ventana derecha
-Super+v: Indicar el inicio de la siguiente ventana verticalmente debajo de la actual
-Super+h: Indicar el inicio de la siguiente ventana horizontalmente a la derecha de la actual
+* Super+1: Escritorio 1
+* Super+2: Escritorio 2
+* Super+3: Escritorio 3
+* Super+4: Escritorio 4
+* Super+Enter: lxterminal
+* Super+Shift+f: pcmanfm
+* Super+Shift+w: Navegador web
+* Super+f: Cambiar ventana a pantalla completa
+* Super+Shift+q: Cerrar ventana actual
+* Super+j: Ir a ventana izquierda
+* Super+k: Ir a ventana inferior
+* Super+l: Ir a ventana superior
+* Super+ñ: Ir a ventana derecha
+* Super+v: Indicar el inicio de la siguiente ventana verticalmente debajo de la actual
+* Super+h: Indicar el inicio de la siguiente ventana horizontalmente a la derecha de la actual
 
 Se puede personalizar la estética con temas de íconos y colores basados en GTK3 utilizando lxappearance
 
@@ -588,8 +589,8 @@ Guardamos y actualizamos la configuración:
 $ source .zshrc
 ```
 
-Seguimos las indicaciones del asistente de configuración de powerlevel10k que aparecerá al actualizar la shell ZSH y en
-caso de que no se ejecute automáticamente el asistente de configuración de powerlevel10k, ejecutaremos la orden
+Seguimos las indicaciones del asistente de configuración de powerlevel10k que aparecerá al actualizar la shell ZSH o al
+abrir una nueva. En caso de que no se ejecute automáticamente el asistente de configuración, ejecutaremos la orden:
 
 ```shell
 $ p10k configure
@@ -597,7 +598,9 @@ $ p10k configure
 Seguir las indicaciones del asistente de configuración y seleccionar las opciones según nuestro gusto personal para usar
 ZSH con el tema powelevel10k.
 
-Proyectos: https://www.zsh.org/
-https://ohmyz.sh/
-https://github.com/ohmyzsh/ohmyzsh
-https://github.com/romkatv/powerlevel10k
+Proyectos: 
+* https://github.com/jorgearma1982/linux-setup
+* https://www.zsh.org/
+* https://ohmyz.sh/
+* https://github.com/ohmyzsh/ohmyzsh
+* https://github.com/romkatv/powerlevel10k
