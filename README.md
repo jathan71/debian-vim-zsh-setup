@@ -122,6 +122,10 @@ set colorcolumn=120 " Muestra la columna límite a 120 caracteres
 set nocompatible " Desactiva modo compatible
 filetype plugin on " Habilita plugin para tipos de archivos
 syntax on " Activa resaltado de sintaxis
+set nu
+set ruler
+set mouse=a
+set list
 
 " Indentación a 2 espacios
 set tabstop=2
@@ -129,12 +133,12 @@ set shiftwidth=2
 set softtabstop=2
 set shiftround
 set expandtab " Insertar espacios en lugar de <Tab>s
-set imrmguicolors " Activa true colors en la terminal
+"set imrmguicolors " Activa true colors en la terminal
 
 " Configuracion spell check
 "set spell
-set nospell
-setlocal spell spelllang=es,en " Corregir palabras usando diccionarios en español
+"set nospell
+"setlocal spell spelllang=es,en " Corregir palabras usando diccionarios en español
 
 " Mapeos
 "inoremap " ""<left>
@@ -170,7 +174,8 @@ call plug#end()
 "
 " THEME:
 "
-colorscheme challenger_deep
+colo koehler
+"colorscheme challenger_deep
 
 ```
 
@@ -467,7 +472,8 @@ exec --no-startup-id /home/jathan/Documents/Scripts/inicio-conky
 ```
 
 Atajos de teclado:
-Tecla Super= tecla entre crtl y alt izquierdos
+* Tecla Super= tecla entre crtl y alt izquierdos
+* Tecla mod= Tecla super en archivo de configuración de i3 (.i3/config)
 
 * Super+1: Escritorio 1
 * Super+2: Escritorio 2
