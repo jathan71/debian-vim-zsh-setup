@@ -116,15 +116,17 @@ Agregamos el contenido inicial:
 " Configuración general
 set title " Muestra el nombre del archivo en la ventana de la terminal
 set number " Muestra los números de las líneas
-set nowrap " No dividir la línea si es muy larga
+"set nowrap " No dividir la línea si es muy larga
 set cursorline " Resalta la línea actual
 set colorcolumn=120 " Muestra la columna límite a 120 caracteres
 set nocompatible " Desactiva modo compatible
 filetype plugin on " Habilita plugin para tipos de archivos
+filetype on
+filetype indent on
 syntax on " Activa resaltado de sintaxis
-set nu
-set ruler
-set mouse=a
+"set nu
+"set ruler
+"set mouse=a
 set list
 
 " Indentación a 2 espacios
